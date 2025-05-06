@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="lessons-container" [class.dark-mode]="isDarkMode">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>☰ Témakörök</h2>
+    </div>
+    <ul class="lesson-list">
+      <li *ngFor="let lesson of lessons$ | async" 
+          (click)="selectLesson(lesson)"
+          [class.active]="lesson.id === selectedLesson?.id">
+       
+        <span class="lesson-title">{{ lesson.title }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Lesson Content -->
+    <div class="lesson-card">
+      <h1>{{ selectedLesson?.title }}</h1>
+      <div class="lesson-content">
+        <p [ngClass]="{'dark': isDarkMode}">{{ selectedLesson?.content }}</p>
+      </div>
+    </div>
+
+    <!-- Examples Section -->
+    <div *ngIf="selectedLesson?.examples" class="lesson-card">
+      <h2>
+        <span class="icon">💻</span>
+        Példák
+      </h2>
+      <div class="code-block">
+        <pre><code>{{ selectedLesson?.examples }}</code></pre>
+      </div>
+    </div>
+
+    <!-- Tips Section -->
+    <div *ngIf="selectedLesson?.tips" class="lesson-card">
+      <h2>
+        <span class="icon">💡</span>
+        Tippek
+      </h2>
+      <div class="tips-container">
+        <div class="tip-item" *ngFor="let tip of selectedLesson.tips.split('\n')">
+          <p [ngClass]="{'dark': isDarkMode}">{{ tip }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

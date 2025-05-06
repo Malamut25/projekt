@@ -1,0 +1,26 @@
+<div class="stars"></div>
+
+<div class="login-container">
+    <h2 style="color: black;">Bejelentkezés</h2>
+    <form>
+        <div class="form-group">
+            <label for="username">Felhasználónév</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username">
+        </div>
+        
+          <div class="form-group">
+            <label for="password">Jelszó</label>
+            <div class="password-container">
+                <input [type]="passwordVisible ? 'text' : 'password'" id="password" name="password" [(ngModel)]="password">
+                <button type="button" (click)="togglePasswordVisibility()">
+                    <img [src]="passwordVisible ? '/assets/icons8-hide-password-30.png' : '/assets/icons8-eye-24.png'" alt="Toggle Password" style="height: 24px;">
+                </button>
+            </div>
+        </div>
+        
+        
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+        <button type="submit" (click)="login()">Bejelentkezés</button>
+        <p style="color: black;">Nincs fiókod? <a routerLink="/signup">Regisztálj</a></p>
+    </form>
+</div>

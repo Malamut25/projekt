@@ -1,0 +1,89 @@
+<div class="quiz-container" [class.dark-mode]="isDarkMode" *ngIf="!quizOver">
+  <div class="question-box">
+    <!-- Question -->
+    <h2 class="question-text">{{ currentQuestion?.question }}</h2>
+
+    <!-- Timer -->
+    <div class="timer-container">
+      <p class="timer-text">Hátralévő idő: {{ timeLeft }} másodperc</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" [ngStyle]="{ 'width': (timeLeft / 30) * 100 + '%', 'background-color': getProgressColor() }"></div>
+      </div>
+    </div>
+
+    <!-- Answers -->
+    <div class="answers">
+      <button
+        *ngFor="let answer of currentQuestion?.answers"
+        class="answer-btn"
+        [class.selected]="answer.selected"
+        [class.correct]="answer.selected && answer.correct"
+        [class.incorrect]="answer.selected && !answer.correct"
+        (click)="checkAnswer(answer)"
+      >
+        {{ answer.text }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz End Screen (Shown after the quiz is over) -->
+<div *ngIf="quizOver" class="quiz-end" [class.dark-mode]="isDarkMode">
+  <!-- Quiz Result Message -->
+  <h2 class="quiz-end-title">{{ quizMessage }}</h2>
+
+  <!-- Score and Percentage -->
+  <div class="score-box">
+    <p class="score">Elért pontszám: <strong>{{ score }}</strong> / {{ questions.length }}</p>
+    <p class="percentage">{{ percentage | number: '1.0-2' }}%</p>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results">
+    <h3 class="results-title">Eredmény:</h3>
+    <div *ngFor="let question of questions; let i = index" class="question-result">
+      <h4 class="question-result-title">Kérdés {{ i + 1 }}: {{ question.question }}</h4>
+      <ul class="answer-list">
+        <li
+          *ngFor="let answer of question.answers"
+          class="answer-item"
+          [class.correct]="answer.correct"
+          [class.incorrect]="answer.selected && !answer.correct"
+        >
+          {{ answer.text }}
+          <span *ngIf="answer.selected" class="user-choice"> (Válaszott)</span>
+          <span *ngIf="answer.correct" class="correct-marker"> ✅</span>
+          <span *ngIf="answer.selected && !answer.correct" class="incorrect-marker"> ❌</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rating Section (Shown if the user scores >= 70%) -->
+  <div *ngIf="showRating" class="rating-section">
+    <h3 class="rating-title">Értékeld:</h3>
+    <div class="slider-container">
+      <input
+        type="range"
+        min="1"
+        max="5"
+        step="1"
+        [value]="selectedRating"
+        (input)="rateQuiz($event)"
+        class="rating-slider"
+      />
+      <p class="rating-value">Kiválaszott értékelés: <strong>{{ selectedRating }}</strong></p>
+    </div>
+    <button
+      class="submit-rating-btn"
+      (click)="submitRating()"
+      [disabled]="!selectedRating"
+      style="background-color: blue;"
+    >
+      Értékelés küldése
+    </button>
+  </div>
+
+  <!-- Restart Button -->
+  <button class="restart-btn" (click)="goToHome()" style="background-color: blue;">Vissza a Quizz oldalra</button>
+</div>

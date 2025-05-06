@@ -1,0 +1,96 @@
+<div class="email-form-container">
+     <form (ngSubmit)="onSubmit()" #emailForm="ngForm" class="email-form">
+      <!-- Subject Field -->
+      <div class="form-group">
+        <label for="subject">Tárgy (A felhasználó nevet írd le.)</label>
+        <input 
+          type="text" 
+          id="subject" 
+          [(ngModel)]="subject" 
+          name="subject"
+          placeholder="Ide írja be a tárgyat"
+          class="form-control"
+        >
+      </div>
+  
+      <!-- Message Field -->
+      <div class="form-group">
+        <label for="message">Üzenet *</label>
+        <textarea 
+          id="message" 
+          [(ngModel)]="message" 
+          name="message"
+          required
+          placeholder="Ide írd az üzenetet..."
+          class="form-control"
+          rows="5"
+        ></textarea>
+      </div>
+  
+      <!-- File Upload -->
+      <div class="form-group">
+        <label for="file-upload">Csatolmány (Nem kötelező)</label>
+        <div class="file-upload-container">
+          <label class="file-upload-label">
+            <input 
+              type="file" 
+              id="file-upload" 
+              (change)="onFileSelected($event)"
+              multiple
+              class="file-upload-input"
+              accept="image/*,.pdf,.doc,.docx,.txt"
+            >
+            <span class="file-upload-button">Csatolmány</span>
+            <span class="file-upload-hint">Maximum 5MB fáljonként (Pdf, Doc, Rar...)</span>
+          </label>
+        </div>
+      </div>
+  
+      <!-- File Previews -->
+      <div class="file-previews" *ngIf="filePreviews.length > 0">
+        <div class="file-preview" *ngFor="let file of filePreviews; let i = index">
+          <div class="preview-content" [class.image-preview]="file.type === 'image'">
+            <div *ngIf="file.type === 'image'" class="image-container">
+              <img [src]="file.url" [alt]="file.name">
+            </div>
+            <div *ngIf="file.type !== 'image'" class="file-icon">
+              <i class="file-type-icon">📄</i>
+              <span class="file-name">{{ truncateFileName(file.name) }}</span>
+            </div>
+            <button 
+              type="button" 
+              (click)="removeFile(i)" 
+              class="remove-file-button"
+              aria-label="Remove file"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button 
+          type="submit" 
+          class="submit-button"
+          [disabled]="isSending || !message"
+          [class.sending]="isSending"
+        >
+          <span *ngIf="!isSending">Küldés</span>
+          <span *ngIf="isSending">Küldés...</span>
+        </button>
+      </div>
+  
+      <!-- Status Message -->
+      <div 
+        *ngIf="sendStatus" 
+        class="status-message"
+        [class.success]="statusClass === 'success'"
+        [class.error]="statusClass === 'error'"
+        [class.sending]="statusClass === 'sending'"
+      >
+        {{ sendStatus }}
+      </div>
+    </form>
+  </div>
