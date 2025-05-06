@@ -1,0 +1,262 @@
+/* ============ LIGHT THEME (DEFAULT) ============ */
+:root {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f3f5;
+  --text-normal: #212529;
+  --text-muted: #495057;
+  --text-link: #1a73e8;
+  --border: #dee2e6;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --accent-color: #6a11cb;
+}
+
+/* ============ DARK THEME (DISCORD STYLE) ============ */
+.dark-mode {
+  --bg-primary: #36393f;
+  --bg-secondary: #2f3136;
+  --bg-tertiary: #232428;
+  --text-normal: #dcddde;
+  --text-muted: #a3a6aa;
+  --text-link: #00b0f4;
+  --border: #42464d;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --accent-color: #5865f2;
+  --section-glow: rgba(114, 137, 218, 0.1);
+}
+
+/* ============ BASE STYLES ============ */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bg-primary);
+  color: var(--text-normal);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* ============ HERO SECTION ============ */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .hero-section {
+  background: linear-gradient(135deg, #3a0ca3, #4361ee);
+  border: 1px solid rgba(114, 137, 218, 0.3);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* ============ CONTENT SECTIONS ============ */
+.content-section {
+  margin-bottom: 40px;
+}
+
+.section {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.dark-mode .section {
+  box-shadow: 
+    var(--shadow),
+    inset 0 0 0 1px var(--section-glow);
+}
+
+.dark-mode .section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(114, 137, 218, 0.3), 
+              transparent);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .section:hover {
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px var(--section-glow);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-normal);
+}
+
+/* ============ CONTACT INFO ============ */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.dark-mode mat-icon {
+  color: var(--text-normal);
+}
+
+/* ============ FORM STYLES ============ */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.dark-mode .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--border);
+}
+
+.dark-mode .mat-input-element {
+  color: var(--text-normal);
+}
+
+.dark-mode .mat-form-field-label {
+  color: var(--text-muted);
+}
+
+button[mat-raised-button] {
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.dark-mode button[mat-raised-button] {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.dark-mode button[mat-raised-button]:hover {
+  background-color: #4752c4;
+}
+
+/* ============ MESSAGE STYLES ============ */
+.success-message,
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.dark-mode .success-message {
+  background-color: rgba(46, 125, 50, 0.2);
+  color: #a5d6a7;
+}
+
+.dark-mode .error-message {
+  background-color: rgba(198, 40, 40, 0.2);
+  color: #ef9a9a;
+}
+
+.success-message mat-icon,
+.error-message mat-icon {
+  font-size: 24px;
+}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 70px 15px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .section {
+    padding: 15px;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

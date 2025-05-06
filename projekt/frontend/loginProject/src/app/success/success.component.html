@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<div class="galeria-container" [class.dark-mode]="isDarkMode" [style.background]="isDarkMode ? '#121212' : '#f9f9f9'">
+  <div class="filter-container">
+    <!-- Filter Sidebar -->
+    <div class="filter-sidebar" [class.dark-mode]="isDarkMode">
+      <!-- Search Bar -->
+      <div class="search-bar-container">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Keresés..."
+          (input)="onSearch($event)"
+          aria-label="Keresés"
+          [class.dark-mode]="isDarkMode"
+        />
+        <!-- Suggestions Dropdown -->
+        <div *ngIf="searchTerm && filteredKvizek.length > 0" class="suggestions" [class.dark-mode]="isDarkMode">
+          <ul>
+            <li *ngFor="let quiz of filteredKvizek" (click)="startQuiz(quiz)">
+              {{ quiz.title }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Language Filter -->
+      <div class="filter-group" [class.dark-mode]="isDarkMode">
+        <label for="language">Nyelv:</label>
+        <select
+          id="language"
+          (change)="onLanguageFilter($event)"
+          aria-label="Válassz nyelvet"
+          [class.dark-mode]="isDarkMode"
+        >
+          <option value="">Összes</option>
+          <option *ngFor="let language of languages" [value]="language.id">
+            {{ language.name }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Rating Filter -->
+      <div class="filter-group" [class.dark-mode]="isDarkMode">
+        <label for="rating">Értékelés:</label>
+        <div class="rating-range">
+          <input
+            type="range"
+            id="minRating"
+            min="0"
+            max="5"
+            [(ngModel)]="minRating"
+            (change)="applyFilters()"
+            aria-label="Minimum értékelés"
+          />
+          <input
+            type="range"
+            id="maxRating"
+            min="0"
+            max="5"
+            [(ngModel)]="maxRating"
+            (change)="applyFilters()"
+            aria-label="Maximum értékelés"
+          />
+          <div class="rating-values">{{ minRating }} - {{ maxRating }} csillag</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz Grid -->
+    <div class="quiz-container">
+      <div class="quiz-grid">
+        <div 
+          class="quiz-card" 
+          *ngFor="let quiz of filteredKvizek; let i = index" 
+          [ngStyle]="{'background-color': quiz.isdone === 1 ? (isDarkMode ? '#1e3d1e' : '#e6f7e6') : (isDarkMode ? '#1e1e1e' : 'ffffff')}"
+          [class.dark-mode]="isDarkMode"
+        >
+          <img [src]="quiz.image" class="quiz-image" alt="{{ quiz.title }}" />
+          <div class="quiz-content">
+            <h3 class="quiz-title">{{ quiz.title || 'Névtelen kvíz' }}</h3>
+            <span *ngIf="quiz.isdone === 1" class="completion-badge" [style.color]="isDarkMode ? '#4CAF50' : 'green'">
+              ✔ Sikeresen kitöltött kvíz
+            </span>
+            <div class="quiz-rating">
+              <span *ngFor="let star of getStars(quiz.rating)">⭐</span>
+            </div>
+            <div class="quiz-actions">
+              <button 
+                (click)="startQuiz(quiz)" 
+                class="btn btn-primary" 
+                aria-label="Kvíz indítása"
+                [class.dark-mode]="isDarkMode"
+              >
+                Indítás
+              </button>
+              <button
+                (click)="deleteQuiz(i)"
+                class="btn btn-danger"
+                *ngIf="user?.teacher === 1 && user.id==quiz.createdby"
+                aria-label="Kvíz törlése"
+                [class.dark-mode]="isDarkMode"
+              >
+                Törlés
+              </button> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

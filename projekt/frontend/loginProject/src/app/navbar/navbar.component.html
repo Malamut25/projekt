@@ -1,0 +1,40 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="assets/images/default.jpg" alt="Logo" class="logo">
+  </div>
+  
+  <div class="navbar-middle">
+    <a routerLink="/fo-oldal" class="nav-link">Főoldal</a>
+    <a routerLink="/about" class="nav-link">Rólunk</a>
+    <a routerLink="/success" class="nav-link">Quizzek</a>
+    <a routerLink="/kapcsolat" class="nav-link">Kapcsolat</a>
+    
+    <div class="nav-link lessons-dropdown" (click)="toggleLessonsDropdown($event)" [class.active]="isLessonsDropdownOpen">
+      Leckék
+      <div class="dropdown-overlay" *ngIf="isLessonsDropdownOpen" (click)="toggleLessonsDropdown($event)"></div>
+      <div class="dropdown" *ngIf="isLessonsDropdownOpen">
+        <button class="dropdown-item" (click)="navigateToLesson('html'); toggleLessonsDropdown($event)">HTML</button>
+        <button class="dropdown-item" (click)="navigateToLesson('css'); toggleLessonsDropdown($event)">CSS</button>
+        <button class="dropdown-item" (click)="navigateToLesson('javascript'); toggleLessonsDropdown($event)">JavaScript</button>
+        <button class="dropdown-item" (click)="navigateToLesson('phyton'); toggleLessonsDropdown($event)">Phyton</button>
+        <button class="dropdown-item" (click)="navigateToLesson('java'); toggleLessonsDropdown($event)">Java</button>
+        <button class="dropdown-item" (click)="navigateToLesson('sql'); toggleLessonsDropdown($event)">Sql</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navbar-right">
+    <div class="profile-section" (click)="toggleDropdown($event)">
+      <img [src]="profileImageUrl" alt="Profile Picture" class="profile-image">
+      <span class="username">Üdv {{ user?.username }}</span>
+    </div>
+    
+    <div class="dropdown" *ngIf="isDropdownOpen">
+      <button class="dropdown-item" (click)="navigateToProfile()">Profil</button>
+      <button class="dropdown-item" (click)="logout()">Kijelentkezés</button>
+      <button *ngIf="user?.teacher === 1" class="dropdown-item" (click)="navigateToCreateQuiz()">
+        Új kvíz létrehozása
+      </button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,275 @@
+[
+    {
+      "question": "Melyik kulcsszóval deklarálhatunk változót JavaScript-ben?",
+      "answers": [
+        { "text": "var", "correct": true },
+        { "text": "int", "correct": false },
+        { "text": "string", "correct": false },
+        { "text": "float", "correct": false }
+      ]
+    },
+    {
+      "question": "Hogyan lehet egy függvényt meghívni JavaScript-ben?",
+      "answers": [
+        { "text": "functionName()", "correct": true },
+        { "text": "call functionName", "correct": false },
+        { "text": "invoke functionName", "correct": false },
+        { "text": "execute functionName", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik operátor felelős az értékek összehasonlításáért és típusegyezés vizsgálatáért?",
+      "answers": [
+        { "text": "===", "correct": true },
+        { "text": "==", "correct": false },
+        { "text": "!=", "correct": false },
+        { "text": "!==", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik metódussal lehet egy tömb utolsó elemét eltávolítani?",
+      "answers": [
+        { "text": "pop()", "correct": true },
+        { "text": "shift()", "correct": false },
+        { "text": "splice()", "correct": false },
+        { "text": "remove()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik metódussal lehet egy tömb első elemét eltávolítani?",
+      "answers": [
+        { "text": "shift()", "correct": true },
+        { "text": "pop()", "correct": false },
+        { "text": "splice()", "correct": false },
+        { "text": "remove()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik JavaScript ciklus fut legalább egyszer, mielőtt ellenőrzi a feltételt?",
+      "answers": [
+        { "text": "do...while", "correct": true },
+        { "text": "for", "correct": false },
+        { "text": "while", "correct": false },
+        { "text": "foreach", "correct": false }
+      ]
+    },
+    {
+      "question": "Hogyan lehet egy elemhez eseménykezelőt hozzáadni JavaScript-ben?",
+      "answers": [
+        { "text": "element.addEventListener()", "correct": true },
+        { "text": "element.onEvent()", "correct": false },
+        { "text": "element.attachEvent()", "correct": false },
+        { "text": "element.setEvent()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik objektum felelős a konzolba való kiírásért JavaScript-ben?",
+      "answers": [
+        { "text": "console", "correct": true },
+        { "text": "log", "correct": false },
+        { "text": "print", "correct": false },
+        { "text": "write", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik metódussal lehet karakterláncot kisbetűssé alakítani?",
+      "answers": [
+        { "text": "toLowerCase()", "correct": true },
+        { "text": "toLower()", "correct": false },
+        { "text": "lowerCase()", "correct": false },
+        { "text": "caseLower()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik metódussal lehet egy karakterláncot nagybetűssé alakítani?",
+      "answers": [
+        { "text": "toUpperCase()", "correct": true },
+        { "text": "toUpper()", "correct": false },
+        { "text": "upperCase()", "correct": false },
+        { "text": "caseUpper()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik metódussal lehet egy tömböt összefűzni egy karakterlánccá?",
+      "answers": [
+        { "text": "join()", "correct": true },
+        { "text": "concat()", "correct": false },
+        { "text": "combine()", "correct": false },
+        { "text": "merge()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik JavaScript függvény kerekíti lefelé a számokat?",
+      "answers": [
+        { "text": "Math.floor()", "correct": true },
+        { "text": "Math.ceil()", "correct": false },
+        { "text": "Math.round()", "correct": false },
+        { "text": "Math.trunc()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik JavaScript függvény generál egy véletlenszámot 0 és 1 között?",
+      "answers": [
+        { "text": "Math.random()", "correct": true },
+        { "text": "random()", "correct": false },
+        { "text": "generateRandom()", "correct": false },
+        { "text": "rand()", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik operátor felelős a moduló (maradékos osztás) műveletért?",
+      "answers": [
+        { "text": "%", "correct": true },
+        { "text": "//", "correct": false },
+        { "text": "\\", "correct": false },
+        { "text": "mod", "correct": false }
+      ]
+    },
+    {
+        "question": "Melyik kulcsszóval hozhatunk létre állandó értéket JavaScript-ben?",
+        "answers": [
+          { "text": "const", "correct": true },
+          { "text": "var", "correct": false },
+          { "text": "let", "correct": false },
+          { "text": "static", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik metódussal lehet egy tömb hosszát lekérdezni?",
+        "answers": [
+          { "text": "length", "correct": true },
+          { "text": "size()", "correct": false },
+          { "text": "count()", "correct": false },
+          { "text": "getSize()", "correct": false }
+        ]
+      },
+      {
+        "question": "Hogyan lehet egy JSON objektumot JavaScript-ben szöveggé alakítani?",
+        "answers": [
+          { "text": "JSON.stringify()", "correct": true },
+          { "text": "JSON.parse()", "correct": false },
+          { "text": "toString()", "correct": false },
+          { "text": "convertToJson()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik JavaScript metódussal lehet egy karakterláncot egy adott karakter mentén feldarabolni?",
+        "answers": [
+          { "text": "split()", "correct": true },
+          { "text": "slice()", "correct": false },
+          { "text": "cut()", "correct": false },
+          { "text": "divide()", "correct": false }
+        ]
+      },
+      {
+        "question": "Hogyan lehet egy JavaScript objektum egy adott kulcsának értékéhez hozzáférni?",
+        "answers": [
+          { "text": "obj[key]", "correct": true },
+          { "text": "obj->key", "correct": false },
+          { "text": "obj.key()", "correct": false },
+          { "text": "get(obj, key)", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik metódussal lehet egy tömb végére elemet hozzáadni?",
+        "answers": [
+          { "text": "push()", "correct": true },
+          { "text": "append()", "correct": false },
+          { "text": "insert()", "correct": false },
+          { "text": "add()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik metódussal lehet egy tömb elején új elemet hozzáadni?",
+        "answers": [
+          { "text": "unshift()", "correct": true },
+          { "text": "push()", "correct": false },
+          { "text": "prepend()", "correct": false },
+          { "text": "addFirst()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik JavaScript metódus ellenőrzi, hogy egy tömb tartalmaz-e egy adott elemet?",
+        "answers": [
+          { "text": "includes()", "correct": true },
+          { "text": "has()", "correct": false },
+          { "text": "contains()", "correct": false },
+          { "text": "exists()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik metódussal lehet egy tömb elemeit növekvő sorrendbe rendezni?",
+        "answers": [
+          { "text": "sort()", "correct": true },
+          { "text": "order()", "correct": false },
+          { "text": "arrange()", "correct": false },
+          { "text": "sequence()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik függvény adja meg egy szám egészrészét JavaScript-ben?",
+        "answers": [
+          { "text": "Math.trunc()", "correct": true },
+          { "text": "Math.floor()", "correct": false },
+          { "text": "Math.ceil()", "correct": false },
+          { "text": "Math.round()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik kulcsszóval lehet aszinkron függvényt létrehozni?",
+        "answers": [
+          { "text": "async", "correct": true },
+          { "text": "await", "correct": false },
+          { "text": "promise", "correct": false },
+          { "text": "setTimeout", "correct": false }
+        ]
+      },
+      {
+        "question": "Hogyan lehet egy JavaScript időzítőt elindítani?",
+        "answers": [
+          { "text": "setTimeout()", "correct": true },
+          { "text": "setTimer()", "correct": false },
+          { "text": "startTimeout()", "correct": false },
+          { "text": "delay()", "correct": false }
+        ]
+      },
+      {
+        "question": "Hogyan lehet egy JavaScript időzítőt leállítani?",
+        "answers": [
+          { "text": "clearTimeout()", "correct": true },
+          { "text": "stopTimeout()", "correct": false },
+          { "text": "cancelTimeout()", "correct": false },
+          { "text": "resetTimeout()", "correct": false }
+        ]
+      },
+      {
+        "question": "Hogyan lehet egy tömb minden elemére egy műveletet végrehajtani JavaScript-ben?",
+        "answers": [
+          { "text": "forEach()", "correct": true },
+          { "text": "map()", "correct": false },
+          { "text": "loop()", "correct": false },
+          { "text": "iterate()", "correct": false }
+        ]
+      },
+      {
+        "question": "Melyik metódussal lehet egy karakterláncban egy adott szövegrészt lecserélni?",
+        "answers": [
+          { "text": "replace()", "correct": true },
+          { "text": "switch()", "correct": false },
+          { "text": "edit()", "correct": false },
+          { "text": "change()", "correct": false }
+        ]
+      },
+      {
+        "question": "Hogyan lehet egy tömb minden elemét egy új tömbbé alakítani egy művelettel?",
+        "answers": [
+          { "text": "map()", "correct": true },
+          { "text": "forEach()", "correct": false },
+          { "text": "convert()", "correct": false },
+          { "text": "filter()", "correct": false }
+        ]
+      }
+    ]
+    
+  
+  

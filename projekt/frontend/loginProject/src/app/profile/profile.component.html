@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="profile-container" [ngClass]="{'dark-mode': isDarkMode}">
+  <!-- Profilkép -->
+  <div class="profile-picture-section" [ngClass]="{'dark-mode': isDarkMode}">
+    <img [src]="profileImageUrl" alt="Profile Picture" class="profile-image">
+    <br>
+    <input type="file" (change)="changeProfilePicture($event)" accept="image/*" style="display: none;" #fileInput>
+    <button class="change-profile-button" [ngClass]="{'dark-mode': isDarkMode}" (click)="fileInput.click()">Change Profile Picture</button>
+  </div>
+
+  <!-- Beállítások -->
+  <div class="settings-section" [ngClass]="{'dark-mode': isDarkMode}">
+    <!-- Dark Mode Toggle -->
+    <div class="setting-item" [ngClass]="{'dark-mode': isDarkMode}">
+      <label for="dark-mode-toggle" [ngClass]="{'dark-mode': isDarkMode}">Dark Mode</label>
+      <mat-slide-toggle
+        class="example-margin"
+        (change)="toggleDarkMode()"
+        [checked]="isDarkMode"
+      >
+      </mat-slide-toggle>
+    </div>
+    
+    <div class="setting-item" [ngClass]="{'dark-mode': isDarkMode}">
+      <button class="change-profile-button" [ngClass]="{'dark-mode': isDarkMode}" routerLink="/fo-oldal">Vissza a főoldalra</button>
+    </div>
+  </div>
+</div>

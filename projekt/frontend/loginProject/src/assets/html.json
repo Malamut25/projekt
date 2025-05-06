@@ -1,0 +1,274 @@
+[
+  {
+    "question": "Mire használjuk a <title> elemet?",
+    "answers": [
+      { "text": "A weboldal címének beállítására", "correct": true },
+      { "text": "A főcím megjelenítésére az oldalon", "correct": false },
+      { "text": "Egy kép beszúrására", "correct": false },
+      { "text": "Egy link létrehozására", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem használható egy bekezdés létrehozására?",
+    "answers": [
+      { "text": "<p>", "correct": true },
+      { "text": "<h1>", "correct": false },
+      { "text": "<div>", "correct": false },
+      { "text": "<span>", "correct": false }
+    ]
+  },
+  {
+    "question": "Milyen elem használható egy kép beillesztésére HTML-ben?",
+    "answers": [
+      { "text": "<img>", "correct": true },
+      { "text": "<image>", "correct": false },
+      { "text": "<pic>", "correct": false },
+      { "text": "<figure>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik attribútum segítségével adhatunk meg egy hivatkozást egy <a> elemben?",
+    "answers": [
+      { "text": "href", "correct": true },
+      { "text": "src", "correct": false },
+      { "text": "link", "correct": false },
+      { "text": "url", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem használható egy táblázat létrehozására HTML-ben?",
+    "answers": [
+      { "text": "<table>", "correct": true },
+      { "text": "<tr>", "correct": false },
+      { "text": "<td>", "correct": false },
+      { "text": "<th>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem felelős egy lista létrehozásáért?",
+    "answers": [
+      { "text": "<ul>", "correct": true },
+      { "text": "<ol>", "correct": false },
+      { "text": "<li>", "correct": false },
+      { "text": "<list>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem használható űrlap létrehozására?",
+    "answers": [
+      { "text": "<form>", "correct": true },
+      { "text": "<input>", "correct": false },
+      { "text": "<button>", "correct": false },
+      { "text": "<textarea>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik attribútum határozza meg egy kép alternatív szövegét?",
+    "answers": [
+      { "text": "alt", "correct": true },
+      { "text": "src", "correct": false },
+      { "text": "title", "correct": false },
+      { "text": "description", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem jelöli a főcímet?",
+    "answers": [
+      { "text": "<h1>", "correct": true },
+      { "text": "<title>", "correct": false },
+      { "text": "<header>", "correct": false },
+      { "text": "<strong>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem felelős a lábjegyzet tartalmáért egy weboldalon?",
+    "answers": [
+      { "text": "<footer>", "correct": true },
+      { "text": "<bottom>", "correct": false },
+      { "text": "<end>", "correct": false },
+      { "text": "<last>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem használható egy gomb létrehozására?",
+    "answers": [
+      { "text": "<button>", "correct": true },
+      { "text": "<click>", "correct": false },
+      { "text": "<press>", "correct": false },
+      { "text": "<submit>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem használható egy videó beágyazására HTML-ben?",
+    "answers": [
+      { "text": "<video>", "correct": true },
+      { "text": "<movie>", "correct": false },
+      { "text": "<clip>", "correct": false },
+      { "text": "<media>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem használható egy hangfájl beágyazására?",
+    "answers": [
+      { "text": "<audio>", "correct": true },
+      { "text": "<sound>", "correct": false },
+      { "text": "<music>", "correct": false },
+      { "text": "<wave>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML attribútum ad egyedi azonosítót egy elemnek?",
+    "answers": [
+      { "text": "id", "correct": true },
+      { "text": "class", "correct": false },
+      { "text": "name", "correct": false },
+      { "text": "key", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem jelöli a dokumentum fejlécét?",
+    "answers": [
+      { "text": "<header>", "correct": true },
+      { "text": "<head>", "correct": false },
+      { "text": "<top>", "correct": false },
+      { "text": "<title>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem használható egy vízszintes vonal beszúrására HTML-ben?",
+    "answers": [
+      { "text": "<hr>", "correct": true },
+      { "text": "<line>", "correct": false },
+      { "text": "<border>", "correct": false },
+      { "text": "<rule>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem használható egy idézet megjelenítésére?",
+    "answers": [
+      { "text": "<blockquote>", "correct": true },
+      { "text": "<q>", "correct": false },
+      { "text": "<cite>", "correct": false },
+      { "text": "<quote>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem használható egy soron belüli szövegkiemelésre?",
+    "answers": [
+      { "text": "<span>", "correct": true },
+      { "text": "<div>", "correct": false },
+      { "text": "<strong>", "correct": false },
+      { "text": "<em>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik attribútum segítségével adhatunk meg egy külső CSS fájlt?",
+    "answers": [
+      { "text": "href", "correct": true },
+      { "text": "src", "correct": false },
+      { "text": "rel", "correct": false },
+      { "text": "type", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem használható egy legördülő lista létrehozására?",
+    "answers": [
+      { "text": "<select>", "correct": true },
+      { "text": "<dropdown>", "correct": false },
+      { "text": "<list>", "correct": false },
+      { "text": "<option>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML attribútum határozza meg, hogy egy űrlapmező kötelező-e?",
+    "answers": [
+      { "text": "required", "correct": true },
+      { "text": "mandatory", "correct": false },
+      { "text": "needed", "correct": false },
+      { "text": "validate", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem szolgál egy navigációs menü létrehozására?",
+    "answers": [
+      { "text": "<nav>", "correct": true },
+      { "text": "<menu>", "correct": false },
+      { "text": "<ul>", "correct": false },
+      { "text": "<header>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML attribútum felelős az űrlapmező alapértelmezett értékének beállításáért?",
+    "answers": [
+      { "text": "value", "correct": true },
+      { "text": "default", "correct": false },
+      { "text": "preset", "correct": false },
+      { "text": "data", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML attribútummal lehet egy űrlapmezőt letiltani?",
+    "answers": [
+      { "text": "disabled", "correct": true },
+      { "text": "readonly", "correct": false },
+      { "text": "locked", "correct": false },
+      { "text": "inactive", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem jelöli egy cikk vagy blog bejegyzés tartalmát?",
+    "answers": [
+      { "text": "<article>", "correct": true },
+      { "text": "<section>", "correct": false },
+      { "text": "<div>", "correct": false },
+      { "text": "<aside>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik elem használható egy oldalsáv jelölésére?",
+    "answers": [
+      { "text": "<aside>", "correct": true },
+      { "text": "<sidebar>", "correct": false },
+      { "text": "<section>", "correct": false },
+      { "text": "<nav>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML attribútum segít egy űrlapmező előzetes szövegének megjelenítésében?",
+    "answers": [
+      { "text": "placeholder", "correct": true },
+      { "text": "hint", "correct": false },
+      { "text": "preview", "correct": false },
+      { "text": "text", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem használható egy adatlista létrehozására?",
+    "answers": [
+      { "text": "<datalist>", "correct": true },
+      { "text": "<select>", "correct": false },
+      { "text": "<options>", "correct": false },
+      { "text": "<list>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML elem felelős egy metainformációk meghatározásáért?",
+    "answers": [
+      { "text": "<meta>", "correct": true },
+      { "text": "<head>", "correct": false },
+      { "text": "<title>", "correct": false },
+      { "text": "<link>", "correct": false }
+    ]
+  },
+  {
+    "question": "Melyik HTML attribútummal adhatunk egyedi CSS osztályokat egy elemhez?",
+    "answers": [
+      { "text": "class", "correct": true },
+      { "text": "style", "correct": false },
+      { "text": "id", "correct": false },
+      { "text": "css", "correct": false }
+    ]
+  }
+]
+
+

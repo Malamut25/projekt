@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<div class="fo-oldal-container" [class.dark-mode]="isDarkMode">
+  <div class="hero-section" [class.dark-mode]="isDarkMode">
+    <h1 class="hero-title">Üdvözöljük a TechSolutions-nél</h1>
+    <p class="hero-subtitle">Innovatív megoldások a digitális oktatáshoz</p>
+  </div>
+
+  <!-- Bemutatkozás -->
+  <div class="content-section">
+    <mat-card class="section" [class.dark-mode]="isDarkMode">
+      <h2 class="section-title">Bemutatkozás</h2>
+      <p class="section-text">
+        A TechSolutions egy kezdő technológiai szolgáltató, amely innovatív megoldásokat kínál diákoknak és tanároknak.
+      </p>
+      <p class="section-text">
+        Széleskörű szolgáltatásaink közé tartozik a szoftverfejlesztés, webdesign, java, adatbáziskezelés. Minden egyes projektünk mögött ott van a csapatunk szakértelme és elkötelezettsége.
+      </p>
+    </mat-card>
+  </div>
+
+  <!-- Szolgáltatások -->
+  <div class="content-section">
+    <mat-card class="section" [class.dark-mode]="isDarkMode">
+      <h2 class="section-title">Szolgáltatásaink</h2>
+      <div class="service-cards">
+        <div class="service-card" [class.dark-mode]="isDarkMode">
+          <h3 class="service-card-title">Kvíz kitöltés</h3>
+          <p class="service-card-text">
+            Saját vagy felhasználóink által készített kvízekkel segítjük a tanulást.
+          </p>
+        </div>
+        <div class="service-card" [class.dark-mode]="isDarkMode">
+          <h3 class="service-card-title">Leckék</h3>
+          <p class="service-card-text">
+            Az alap nyelvekhez a leckék oldalon találhatóak részletes de szimpla lecke példákkal amely segít minden saját projekten.
+          </p>
+        </div>
+        <div class="service-card" [class.dark-mode]="isDarkMode">
+          <h3 class="service-card-title">Kvíz készítés</h3>
+          <p class="service-card-text">
+            Tanárainknak lehetősége van saját kvízeket csinálni és rögtön osztályozni is gyorsan és hatékonyan.
+          </p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- Kapcsolat -->
+  <div class="content-section">
+    <mat-card class="section" [class.dark-mode]="isDarkMode">
+      <h2 class="section-title">Kapcsolat</h2>
+      <p class="section-text">
+        Ha szeretne többet megtudni rólunk, vagy szeretne írni nekünk, kérjük, lépjen kapcsolatba velünk. Csapatunk szívesen segít Önnek a legjobb megoldás megtalálásában.
+      </p>
+      <button mat-raised-button color="primary" [class.dark-mode]="isDarkMode" routerLink="/kapcsolat">Kapcsolatfelvétel</button>
+    </mat-card>
+  </div>
+</div>

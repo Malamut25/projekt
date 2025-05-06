@@ -1,0 +1,261 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+.navbar-left .logo {
+  height: 60px;
+  transition: height 0.3s ease;
+}
+
+.navbar-middle {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4CAF50;
+}
+
+.lessons-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Desktop Dropdown */
+.lessons-dropdown .dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  width: 200px;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.lessons-dropdown:hover .dropdown,
+.lessons-dropdown:focus-within .dropdown {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.lessons-dropdown .dropdown-item {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.lessons-dropdown .dropdown-item:hover {
+  background-color: #007bff;
+}
+
+.navbar-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.username {
+  font-size: 16px;
+  color: white;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.dropdown-item {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+    background-color: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-wrap: nowrap;
+  }
+
+  .navbar-left {
+    flex-shrink: 0;
+  }
+
+  .navbar-left .logo {
+    height: 40px;
+  }
+
+  .navbar-middle {
+    display: flex;
+    flex: 1;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    margin: 0 10px;
+    padding: 5px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .navbar-middle::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    white-space: nowrap;
+    scroll-snap-align: start;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .lessons-dropdown {
+    position: relative;
+  }
+
+  /* Mobile Dropdown */
+  .lessons-dropdown .dropdown {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 60vh;
+    height: 30vh;
+    overflow-y: auto;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .lessons-dropdown.active .dropdown {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+    
+  }
+
+  .lessons-dropdown.active .dropdown-overlay {
+    display: block;
+    
+  }
+
+  .profile-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .dropdown {
+    top: 45px;
+    right: 10px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-middle {
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .navbar-left .logo {
+    height: 35px;
+  }
+
+  .profile-image {
+    width: 30px;
+    height: 30px;
+  }
+}

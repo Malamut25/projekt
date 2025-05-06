@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="create-quiz-container">
+  <h2>Új kvíz létrehozása</h2>
+  <div class="form-group">
+    <label for="quiz-title">Kvíz címe</label>
+    <input id="quiz-title" [(ngModel)]="newQuiz.title" placeholder="Kvíz címe" class="form-control">
+  </div>
+  <div class="image-upload-container">
+    <label for="quiz-image">
+      <span>📸 Kép feltöltése</span>
+      <input type="file" id="quiz-image" (change)="onFileSelected($event)" accept="image/*">
+    </label>
+    <img *ngIf="imagePreview" [src]="imagePreview" alt="Előnézet" class="image-preview">
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="quiz-description">Leírás</label>
+    <textarea id="quiz-description" [(ngModel)]="newQuiz.description" placeholder="Kvíz leírása" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="quiz-language">Programozási nyelv</label>
+    <select id="quiz-language" [(ngModel)]="newQuiz.language_id" class="form-control">
+      <option *ngFor="let lang of languages" [value]="lang.id">{{ lang.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <h2>Kérdés {{currentQuestionIndex + 1}}</h2>
+    <label for="question">Kérdés</label>
+    <textarea id="question" [(ngModel)]="newQuiz.questions[currentQuestionIndex].question" placeholder="Írj be egy kérdés" class="form-control" required></textarea>
+  </div>
+  
+
+  
+
+
+  <div *ngFor="let answer of [0, 1, 2, 3]; let i = index" class="answer-container">
+  <div class="form-group">
+    <label for="answer-{{currentQuestionIndex}}-{{i}}">Válasz {{ i + 1 }}</label>
+    <input id="answer-{{currentQuestionIndex}}-{{i}}" 
+           [ngModel]="getAnswerField(newQuiz.questions[currentQuestionIndex], i)" 
+           (ngModelChange)="setAnswerField(newQuiz.questions[currentQuestionIndex], i, $event)" 
+           placeholder="Válasz {{ i + 1 }}" 
+           class="form-control">
+  </div>
+  <div class="form-check">
+    <input type="radio" 
+           name="correct-answer-{{currentQuestionIndex}}" 
+           [checked]="newQuiz.questions[currentQuestionIndex].helyes_valasz === i" 
+           (change)="setCorrectAnswer(i)" 
+           class="form-check-input" 
+           id="correct-{{currentQuestionIndex}}-{{i}}">
+    <label class="form-check-label" for="correct-{{currentQuestionIndex}}-{{i}}">Helyes válasz</label>
+  </div>
+</div>
+
+  <!-- Hibajelzés -->
+  <div *ngIf="showError" class="error-message">
+    A válaszok nem lehetnek ismétlődőek! Kérjük, ellenőrizze a válaszokat.
+  </div>
+
+  <div class="navigation-buttons">
+    <button (click)="previousQuestion()" class="btn btn-secondary" [disabled]="currentQuestionIndex === 0">Előző</button>
+    <button (click)="nextQuestion()" class="btn btn-primary" [disabled]="!isCurrentQuestionValid()">Következő</button>
+  </div>
+
+  <div class="button-group">
+    <button (click)="saveQuiz()" class="btn btn-success" [disabled]="!isQuizValid()">Kvíz Mentése</button>
+  </div>
+</div>

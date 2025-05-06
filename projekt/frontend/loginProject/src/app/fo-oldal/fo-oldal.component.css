@@ -1,0 +1,283 @@
+/* ============ LIGHT THEME (DEFAULT) ============ */
+:root {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f3f5;
+  --bg-accent: #e9ecef;
+  --text-normal: #212529;
+  --text-muted: #495057;
+  --text-link: #1a73e8;
+  --interactive-normal: #4d4d4d;
+  --interactive-hover: #2d2d2d;
+  --border: #dee2e6;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --section-glow: rgba(0, 0, 0, 0.05);
+  --primary-color: #1a73e8;
+  --primary-hover: #0d5bba;
+}
+
+/* ============ DARK THEME ============ */
+.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --bg-accent: #333333;
+  --text-normal: #e0e0e0;
+  --text-muted: #aaaaaa;
+  --text-link: #4CAF50;
+  --border: #424242;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --section-glow: rgba(114, 137, 218, 0.1);
+  --primary-color: #5865f2;
+  --primary-hover: #4752c4;
+}
+
+/* ============ BASE STYLES ============ */
+.fo-oldal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bg-primary);
+  color: var(--text-normal);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* ============ HERO SECTION ============ */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(255, 255, 255, 0.3), 
+              transparent);
+}
+
+.dark-mode .hero-section {
+  background: linear-gradient(135deg, #3a0ca3, #4361ee);
+  border: 1px solid rgba(114, 137, 218, 0.3);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  position: relative;
+}
+
+/* ============ CONTENT SECTIONS ============ */
+.content-section {
+  margin-bottom: 30px;
+}
+
+.section {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(0, 0, 0, 0.1), 
+              transparent);
+}
+
+.dark-mode .section::before {
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(114, 137, 218, 0.3), 
+              transparent);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-normal);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+/* ============ SERVICE CARDS ============ */
+.service-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: var(--bg-tertiary);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary-color);
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(0, 0, 0, 0.05), 
+              transparent);
+}
+
+.dark-mode .service-card::before {
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(114, 137, 218, 0.1), 
+              transparent);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-hover);
+}
+
+.dark-mode .service-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--text-normal);
+  transition: color 0.3s ease;
+}
+
+.service-card-text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  line-height: 1.6;
+}
+
+/* ============ BUTTONS ============ */
+button.mat-raised-button {
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 10px rgba(26, 115, 232, 0.3);
+}
+
+button.mat-raised-button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--interactive-normal);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+  
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 70px 15px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .section {
+    padding: 20px 15px;
+  }
+}

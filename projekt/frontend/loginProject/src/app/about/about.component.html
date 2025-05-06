@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+<div class="about-container" [class.dark-mode]="isDarkMode">
+  <div class="hero-section" [class.dark-mode]="isDarkMode">
+    <h1 class="hero-title">Rólunk</h1>
+    <p class="hero-subtitle">Ismerje meg a TechSolutions történetét és értékeit</p>
+  </div>
+
+  <!-- Cégtörténet -->
+  <div class="content-section">
+    <mat-card class="section" [class.dark-mode]="isDarkMode">
+      <h2 class="section-title">Cégtörténet</h2>
+      <p class="section-text">
+        A TechSolutions egy olyan vállalat, amely diákoknak és tanároknak egy könnyű, egyszerű és gyors megoldást nyújt tanításban, illetve minden minden más személynek aki regisztrál az oldalunkra.
+      </p>
+      <p class="section-text">
+        A célja az oldalunknak hogy programozási téren segítse a diákokat illetve mindenkit aki tanulni akar vagy bármilyen szinten érdekli őt. Tanárok könnyedén tudnak egyszerű kvízeket létrehozni és diákok keresni a sok szinte végtelen számú kvíz között.
+      </p>
+      <p class="section-text">
+        Az oldal fejlesztése során figyelembe vettük az iskolákban fennálló internetes problémákat, és megpróbáltuk megoldani azokat azzal, hogy minnél kevesebb sávszélességet használjon az oldal. Ezúttal segítsük a nehezebb sorsú embereket is akiknek lehet hogy nincs korlátlan internet elérésük.
+      </p>
+      <p class="section-text">
+        Az oldalunkon lehetőség van a kvízek létrehozásá, illetve a kvízek keresésére. A kvízek létrehozásához nem kell semmilyen programozási ismeret, csak egy jó ötlet és egy kis fantázia.  
+      </p>
+      <p class="section-text">
+        Későbbi fejlesztések során lehetőség lesz a kvízek megosztására, illetve más típusú kvízek létrehozására is. Egyedi Id alapú keresésre és google-el való bejelentkezésre is.
+      </p>
+    </mat-card>
+  </div>
+
+  <!-- Cégértékek -->
+  <div class="content-section">
+    <mat-card class="section" [class.dark-mode]="isDarkMode">
+      <h2 class="section-title">Cégértékeink</h2>
+      <p class="section-text">
+        A cégünk alapvető értékei a minőség, az innováció és az ügyfélközpontúság. Hiszünk abban, hogy a technológia csak akkor hasznos, ha valódi értéket teremt az ügyfelek számára. Ezért minden egyes szolgáltatásunk mögött ott van a csapatunk szakértelme és elkötelezettsége.
+      </p>
+      <p class="section-text">
+        Fenntarthatóság és etikus üzleti gyakorlatok is kulcsfontosságúak számunkra. Célunk, hogy hozzájáruljunk az emberek fejlődéséhez és ezzel egy erős eszközt nyújtsunk ingyen mindenki főleg iskolák számára.
+      </p>
+    </mat-card>
+  </div>
+
+  <!-- Csapat -->
+  <div class="content-section">
+    <mat-card class="section" [class.dark-mode]="isDarkMode">
+      <h2 class="section-title">Csapatunk</h2>
+      <div class="team-cards">
+        <div class="team-card" [class.dark-mode]="isDarkMode">
+          <img src="assets/baldi_david.jpg" alt="Báldi Dávid" class="team-image">
+          <h3 class="team-name">Báldi Dávid</h3>
+          <p class="team-role">Vezető Fejlesztő</p>
+        </div>
+        <div class="team-card" [class.dark-mode]="isDarkMode">
+          <img src="assets/hegyi_tibor.jpg" alt="Hegyi Tibor" class="team-image">
+          <h3 class="team-name">Hegyi Tibor</h3>
+          <p class="team-role">Kreatív Tervező</p>
+        </div>
+        <div class="team-card" [class.dark-mode]="isDarkMode">
+          <img src="assets/denes_richard.jpg" alt="Dénes Richárd László" class="team-image">
+          <h3 class="team-name">Dénes Richárd László</h3>
+          <p class="team-role">Projektmenedzser</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

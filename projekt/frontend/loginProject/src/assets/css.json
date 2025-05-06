@@ -1,0 +1,273 @@
+[
+    {
+      "question": "Milyen CSS tulajdonságot használunk a szöveg színének megváltoztatására?",
+      "answers": [
+        { "text": "color", "correct": true },
+        { "text": "background-color", "correct": false },
+        { "text": "font-color", "correct": false },
+        { "text": "text-color", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság határozza meg a betűméretet?",
+      "answers": [
+        { "text": "font-size", "correct": true },
+        { "text": "text-size", "correct": false },
+        { "text": "size", "correct": false },
+        { "text": "font-weight", "correct": false }
+      ]
+    },
+    {
+      "question": "Hogyan lehet félkövérre állítani egy szöveget CSS-ben?",
+      "answers": [
+        { "text": "font-weight: bold;", "correct": true },
+        { "text": "text-bold: true;", "correct": false },
+        { "text": "font-style: bold;", "correct": false },
+        { "text": "bold: yes;", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság befolyásolja a háttérszínt?",
+      "answers": [
+        { "text": "background-color", "correct": true },
+        { "text": "color", "correct": false },
+        { "text": "bgcolor", "correct": false },
+        { "text": "background", "correct": false }
+      ]
+    },
+    {
+      "question": "Hogyan lehet egy elem szélességét beállítani CSS-ben?",
+      "answers": [
+        { "text": "width", "correct": true },
+        { "text": "size", "correct": false },
+        { "text": "length", "correct": false },
+        { "text": "max-width", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság állítja be az elem szegélyét?",
+      "answers": [
+        { "text": "border", "correct": true },
+        { "text": "outline", "correct": false },
+        { "text": "frame", "correct": false },
+        { "text": "box-border", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság határozza meg az elem külső margóját?",
+      "answers": [
+        { "text": "margin", "correct": true },
+        { "text": "padding", "correct": false },
+        { "text": "spacing", "correct": false },
+        { "text": "gap", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság állítja be a betűtípust?",
+      "answers": [
+        { "text": "font-family", "correct": true },
+        { "text": "font-style", "correct": false },
+        { "text": "text-font", "correct": false },
+        { "text": "font-weight", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság állítja be az elem belső térközét?",
+      "answers": [
+        { "text": "padding", "correct": true },
+        { "text": "margin", "correct": false },
+        { "text": "spacing", "correct": false },
+        { "text": "inner-space", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság határozza meg az elem átlátszóságát?",
+      "answers": [
+        { "text": "opacity", "correct": true },
+        { "text": "visibility", "correct": false },
+        { "text": "transparent", "correct": false },
+        { "text": "alpha", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonsággal lehet árnyékot adni egy dobozhoz?",
+      "answers": [
+        { "text": "box-shadow", "correct": true },
+        { "text": "shadow", "correct": false },
+        { "text": "border-shadow", "correct": false },
+        { "text": "outline-shadow", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság határozza meg az elem láthatóságát?",
+      "answers": [
+        { "text": "visibility", "correct": true },
+        { "text": "display", "correct": false },
+        { "text": "opacity", "correct": false },
+        { "text": "hidden", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság segítségével lehet egy elemet középre igazítani?",
+      "answers": [
+        { "text": "text-align: center;", "correct": true },
+        { "text": "align: center;", "correct": false },
+        { "text": "horizontal-align: center;", "correct": false },
+        { "text": "center: true;", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság határozza meg az elem kijelző típusát?",
+      "answers": [
+        { "text": "display", "correct": true },
+        { "text": "visibility", "correct": false },
+        { "text": "opacity", "correct": false },
+        { "text": "type", "correct": false }
+      ]
+    },
+    {
+      "question": "Melyik CSS tulajdonság felelős az elem tartalmának elrejtéséért?",
+      "answers": [
+        { "text": "display: none;", "correct": true },
+        { "text": "visibility: hidden;", "correct": false },
+        { "text": "opacity: 0;", "correct": false },
+        { "text": "hide: true;", "correct": false }
+      ]
+    },
+    
+        {
+          "question": "Melyik CSS tulajdonság határozza meg az elem háttérképét?",
+          "answers": [
+            { "text": "background-image", "correct": true },
+            { "text": "image", "correct": false },
+            { "text": "background", "correct": false },
+            { "text": "bg-image", "correct": false }
+          ]
+        },
+        {
+          "question": "Hogyan lehet egy elem tartalmát nagybetűssé alakítani CSS-ben?",
+          "answers": [
+            { "text": "text-transform: uppercase;", "correct": true },
+            { "text": "font-case: upper;", "correct": false },
+            { "text": "text-case: uppercase;", "correct": false },
+            { "text": "uppercase: true;", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság felelős a betűk közötti térköz beállításáért?",
+          "answers": [
+            { "text": "letter-spacing", "correct": true },
+            { "text": "word-spacing", "correct": false },
+            { "text": "line-height", "correct": false },
+            { "text": "text-space", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS érték felel meg a félkövér szövegnek?",
+          "answers": [
+            { "text": "font-weight: bold;", "correct": true },
+            { "text": "font-bold: true;", "correct": false },
+            { "text": "text-bold: yes;", "correct": false },
+            { "text": "bold-weight: 1;", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság határozza meg a szöveg igazítását?",
+          "answers": [
+            { "text": "text-align", "correct": true },
+            { "text": "align", "correct": false },
+            { "text": "text-position", "correct": false },
+            { "text": "justify", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság felelős egy elem pozíciójának beállításáért?",
+          "answers": [
+            { "text": "position", "correct": true },
+            { "text": "location", "correct": false },
+            { "text": "alignment", "correct": false },
+            { "text": "pos", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS érték használható egy elem fix pozícióban tartásához?",
+          "answers": [
+            { "text": "position: fixed;", "correct": true },
+            { "text": "position: static;", "correct": false },
+            { "text": "position: absolute;", "correct": false },
+            { "text": "position: relative;", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság állítja be a sorok közötti térközt?",
+          "answers": [
+            { "text": "line-height", "correct": true },
+            { "text": "letter-spacing", "correct": false },
+            { "text": "word-spacing", "correct": false },
+            { "text": "spacing", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság határozza meg az elem maximális szélességét?",
+          "answers": [
+            { "text": "max-width", "correct": true },
+            { "text": "width", "correct": false },
+            { "text": "size-limit", "correct": false },
+            { "text": "max-size", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság határozza meg az elem minimális magasságát?",
+          "answers": [
+            { "text": "min-height", "correct": true },
+            { "text": "height", "correct": false },
+            { "text": "size-min", "correct": false },
+            { "text": "min-size", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság teszi lehetővé a lebegő hatás hozzáadását egy elemhez?",
+          "answers": [
+            { "text": "float", "correct": true },
+            { "text": "hover", "correct": false },
+            { "text": "align", "correct": false },
+            { "text": "display", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság felelős egy lista stílusának beállításáért?",
+          "answers": [
+            { "text": "list-style", "correct": true },
+            { "text": "list-type", "correct": false },
+            { "text": "bullet-style", "correct": false },
+            { "text": "list-decoration", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság felelős az elem átlátszóságának szabályozásáért?",
+          "answers": [
+            { "text": "opacity", "correct": true },
+            { "text": "visibility", "correct": false },
+            { "text": "transparent", "correct": false },
+            { "text": "alpha", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság segít egy elem görgetésének szabályozásában?",
+          "answers": [
+            { "text": "overflow", "correct": true },
+            { "text": "scroll", "correct": false },
+            { "text": "scrolling", "correct": false },
+            { "text": "auto-scroll", "correct": false }
+          ]
+        },
+        {
+          "question": "Melyik CSS tulajdonság szabályozza a rugalmas konténerek elrendezését?",
+          "answers": [
+            { "text": "display: flex;", "correct": true },
+            { "text": "display: grid;", "correct": false },
+            { "text": "display: block;", "correct": false },
+            { "text": "display: inline;", "correct": false }
+          ]
+        }
+    ]
